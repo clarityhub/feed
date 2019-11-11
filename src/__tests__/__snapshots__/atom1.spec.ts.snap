@@ -6,7 +6,7 @@ exports[`atom 1.0 should generate a valid feed 1`] = `
     <id>http://example.com/</id>
     <title>Feed Title</title>
     <updated>2013-07-13T23:00:00.000Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
+    <generator>https://github.com/clarityhub/feed</generator>
     <author>
         <name>John Doe</name>
         <email>johndoe@example.com</email>
