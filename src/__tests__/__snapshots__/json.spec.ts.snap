@@ -23,6 +23,10 @@ exports[`json 1 should generate a valid feed 1`] = `
             \\"title\\": \\"Hello World\\",
             \\"summary\\": \\"This is an article about Hello World.\\",
             \\"image\\": \\"https://example.com/hello-world.jpg\\",
+            \\"tags\\": [
+                \\"tag 1\\",
+                \\"tag 2\\"
+            ],
             \\"date_modified\\": \\"2013-07-13T23:00:00.000Z\\",
             \\"date_published\\": \\"2013-07-10T23:00:00.000Z\\",
             \\"author\\": {

@@ -35,6 +35,10 @@ sampleFeed.addItem({
   link: "https://example.com/hello-world",
   description: "This is an article about Hello World.",
   content: "Content of my item",
+  tags: [
+    "tag 1",
+    "tag 2"
+  ],
   author: [
     {
       name: "Jane Doe",

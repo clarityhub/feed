@@ -60,6 +60,10 @@ export default (ins: Feed) => {
       feedItem.image = item.image;
     }
 
+    if (item.tags) {
+      feedItem.tags = item.tags;
+    }
+
     if (item.date) {
       feedItem.date_modified = item.date.toISOString();
     }
