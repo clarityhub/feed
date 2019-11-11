@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://travis-ci.org/@clarityhub/feed"><img src="https://travis-ci.org/@clarityhub/feed.svg?branch=master" alt="Build Status"></a> <a href='https://coveralls.io/github/@clarityhub/feed?branch=master'><img src='https://coveralls.io/repos/github/@clarityhub/feed/badge.svg?branch=master' alt='Coverage Status' /></a> <a href="https://badge.fury.io/js/feed"><img src="https://badge.fury.io/js/feed.svg" alt="npm version" height="18"></a> <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="Tested with Jest"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://travis-ci.org/clarityhub/feed"><img src="https://travis-ci.org/clarityhub/feed.svg?branch=master" alt="Build Status"></a> <a href='https://coveralls.io/github/clarityhub/feed?branch=master'><img src='https://coveralls.io/repos/github/clarityhub/feed/badge.svg?branch=master' alt='Coverage Status' /></a> <a href="https://badge.fury.io/js/feed"><img src="https://badge.fury.io/js/feed.svg" alt="npm version" height="18"></a> <a href="https://github.com/facebook/jest"><img src="https://img.shields.io/badge/tested_with-jest-99424f.svg" alt="Tested with Jest"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
 </p>
 <p align="center"><code>@clarityhub/feed</code> - <strong>RSS 2.0, JSON Feed 1.0, and Atom 1.0</strong> generator for <strong>Node.js</strong><br>
 Making content syndication simple and intuitive!</p>
@@ -17,13 +17,13 @@ Making content syndication simple and intuitive!</p>
 ## Installation
 
 ```bash
-$ yarn add feed
+$ yarn add @clarityhub/feed
 ```
 
 ## Example
 
 ```js
-import { Feed } from "feed";
+import { Feed } from "@clarityhub/feed";
 
 const feed = new Feed({
   title: "Feed Title",
@@ -54,6 +54,10 @@ posts.forEach(post => {
     link: post.url,
     description: post.description,
     content: post.content,
+    tags: [
+      "tag 1",
+      "tag 2"
+    ],
     author: [
       {
         name: "Jane Doe",
@@ -101,31 +105,9 @@ console.log(feed.json1());
 // Output: JSON Feed 1.0
 ```
 
-## Migrating from `< 3.0.0`
-
-If you are migrating from a version older than `3.0.0`, be sure to update your import as we migrated to ES6 named imports.
-
-If your environment supports the ES6 module syntax, you can `import` as described above:
-
-```ts
-import { Feed } from "feed";
-```
-
-Otherwise, you can stick with `require()`:
-
-```diff
-- const Feed = require('feed');
-+ const Feed = require('feed').Feed;
-```
-
-## More Information
-
-- Follow [@jpmonette](https://twitter.com/jpmonette) on Twitter for updates
-- Read my personal blog [Blogue de Jean-Philippe Monette](http://blogue.jpmonette.net/) to learn more about what I do!
-
 ## License
 
-Copyright (C) 2013, Jean-Philippe Monette <contact@jpmonette.net>
+Copyright (C) 2013, Jean-Philippe Monette <contact@jpmonette.net>, Clarity Hub <opensource@clarityhub.io>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
